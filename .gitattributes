@@ -1,0 +1,20 @@
+# Normalize line endings to LF in the repository; check out with the platform default
+* text=auto
+
+*.cs      text diff=csharp
+*.csproj  text
+*.props   text
+*.slnx    text
+*.json    text
+*.md      text
+*.yml     text
+
+*.sh      text eol=lf
+*.cmd     text eol=crlf
+*.bat     text eol=crlf
+
+*.png     binary
+*.jpg     binary
+*.ico     binary
+*.snk     binary
+*.nupkg   binary
