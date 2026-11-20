@@ -86,9 +86,10 @@ var message = DeleteUser(id).Match(
     failure: _ => "Error");
 ```
 
-> [!NOTE] When switching over a `Result<T>` where `T` is an unconstrained
-> generic type parameter, the compiler reports warning CS8655 because `T` could
-> be null. Add a `_ =>` arm to handle it.
+> [!NOTE]
+> When switching over a `Result<T>` where `T` is an unconstrained generic type
+> parameter, the compiler reports warning CS8655 because `T` could be null.
+> Add a `_ =>` arm to handle it.
 >
 > If `T` could be a supertype of a case type, such as `object` or an interface
 > the case records implement, put the `T` arm after the case arms. Otherwise a
